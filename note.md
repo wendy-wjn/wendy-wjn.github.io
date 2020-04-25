@@ -30,7 +30,6 @@ Nat网络：可访问外网和其他虚拟机；
 更新软件索引目录：sudo apt-get update	
 取消：ctrl+c；放大/缩小：ctrl+=/ctrl+-；切换全屏：ctrl+f；自动补全命令和路径：tab键；
 yes；bb；cowsay/xcowsay；moo	；cmatrix；aafire；sl；oneko；
-
 第3章	终端命令
 一、	文件与目录
 分区：Linux系统没有分区概念；Linux目录的组织，只有根目录/
