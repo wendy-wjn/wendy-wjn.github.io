@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>第4章Git应用 | 王佳妮的笔记维护</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、Git与Github使用初步Recap 123• -SSH架构远程管理的运维体系• -SCP、Remote for VS Code远程编辑• -NAT配置问题 1、Git版本控制系统（Version Control System, VCS）1234• 其它VCS: CVS, Subersion, Visual source safe• 开源共享，可以自架服务器，同时使用客户端访问与应用• 专用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第4章Git应用">
+<meta property="og:url" content="https://wendy-wjn.github.io/2020/05/03/pages4/index.html">
+<meta property="og:site_name" content="王佳妮的笔记维护">
+<meta property="og:description" content="一、Git与Github使用初步Recap 123• -SSH架构远程管理的运维体系• -SCP、Remote for VS Code远程编辑• -NAT配置问题 1、Git版本控制系统（Version Control System, VCS）1234• 其它VCS: CVS, Subersion, Visual source safe• 开源共享，可以自架服务器，同时使用客户端访问与应用• 专用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-03T22:15:46.000Z">
+<meta property="article:modified_time" content="2020-05-06T06:56:00.407Z">
+<meta property="article:author" content="WJN">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="王佳妮的笔记维护" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">王佳妮的笔记维护</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">浙江师范大学</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wendy-wjn.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="github-pages4" class="article article-type-github" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/03/pages4/" class="article-date">
+  <time datetime="2020-05-03T22:15:46.000Z" itemprop="datePublished">2020-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第4章Git应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Git与Github使用初步"><a href="#一、Git与Github使用初步" class="headerlink" title="一、Git与Github使用初步"></a>一、Git与Github使用初步</h2><p>Recap</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">• -SSH架构远程管理的运维体系</span><br><span class="line">• -SCP、Remote <span class="keyword">for</span> VS Code远程编辑</span><br><span class="line">• -NAT配置问题</span><br></pre></td></tr></table></figure>
+<h3 id="1、Git版本控制系统（Version-Control-System-VCS）"><a href="#1、Git版本控制系统（Version-Control-System-VCS）" class="headerlink" title="1、Git版本控制系统（Version Control System, VCS）"></a>1、Git版本控制系统（Version Control System, VCS）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">• 其它VCS: CVS, Subersion, Visual <span class="built_in">source</span> safe</span><br><span class="line">• 开源共享，可以自架服务器，同时使用客户端访问与应用</span><br><span class="line">• 专用的第三方的Git服务，相当于租用了别人的Git服务器，在上面创建软件仓库并进行版本管理。</span><br><span class="line">• 典型的Git服务：Github，Gitlab</span><br></pre></td></tr></table></figure>
+<h3 id="2、Git中的基本概念"><a href="#2、Git中的基本概念" class="headerlink" title="2、Git中的基本概念"></a>2、Git中的基本概念</h3><p>-仓库：相当于一个托管的单位，一般对应一个项目<br>-版本： 仓库中的文件的某一个状态</p>
+<h3 id="3、Git安装"><a href="#3、Git安装" class="headerlink" title="3、Git安装"></a>3、Git安装</h3><p>Ubuntu或者Raspbian OS：<br>apt-get/apt install git</p>
+<h3 id="4、Git的身份认证"><a href="#4、Git的身份认证" class="headerlink" title="4、Git的身份认证"></a>4、Git的身份认证</h3><p>一般情况下采用SSH或PGP密钥认证的方式。<br>参考：SSH的免密登录</p>
+<h3 id="5、创建Git仓库"><a href="#5、创建Git仓库" class="headerlink" title="5、创建Git仓库"></a>5、创建Git仓库</h3><p><a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 注册一个账号<br>Repositories（仓库）中选择New<br>仓库地址：<a href="https://github.com/scratchzjnu/zjnumaker.git；git@github.com:scratchzjnu/zjnumaker.git" target="_blank" rel="noopener">https://github.com/scratchzjnu/zjnumaker.git；git@github.com:scratchzjnu/zjnumaker.git</a></p>
+<h3 id="6、Git初始化配置"><a href="#6、Git初始化配置" class="headerlink" title="6、Git初始化配置"></a>6、Git初始化配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">• 提前准备用户名、邮箱：scratchzjnu, service@ilester.net</span><br><span class="line">• git config --global user.name <span class="string">"用户名"</span></span><br><span class="line">• git config --global user.email <span class="string">"邮箱”</span></span><br><span class="line"><span class="string">• ssh-keygen -t rsa -C "</span>邮箱<span class="string">"</span></span><br><span class="line"><span class="string">• cat ~/.ssh/id_rsa.pub并将输出的内容添加到Github账户/setttings/ssh and gpg keys</span></span><br></pre></td></tr></table></figure>
+<h3 id="7、初始化仓库"><a href="#7、初始化仓库" class="headerlink" title="7、初始化仓库"></a>7、初始化仓库</h3><p>创建一个用作本地存储的仓库目录<br>git init（会初始化仓库，相关配置在.git下）<br>注意：.git文件尽量不要修改</p>
+<h3 id="8、将文件添加到仓库并提交"><a href="#8、将文件添加到仓库并提交" class="headerlink" title="8、将文件添加到仓库并提交"></a>8、将文件添加到仓库并提交</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">• 前置：创建一个文件，例如：readme.md</span><br><span class="line">• git add readme.md</span><br><span class="line">• git commit -am <span class="string">"开发日志"</span></span><br><span class="line">• git status</span><br></pre></td></tr></table></figure>
+<h3 id="9、查看文件的版本记录"><a href="#9、查看文件的版本记录" class="headerlink" title="9、查看文件的版本记录"></a>9、查看文件的版本记录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">• git <span class="built_in">log</span> 文件名查看</span><br><span class="line">• commit 后面的标识即为版本号</span><br></pre></td></tr></table></figure>
+<h3 id="10、回退版本-git-checkout-版本号-文件名"><a href="#10、回退版本-git-checkout-版本号-文件名" class="headerlink" title="10、回退版本    git checkout 版本号 文件名"></a>10、回退版本    git checkout 版本号 文件名</h3><p>git </p>
+<h3 id="11、将文件上传到Git服务器"><a href="#11、将文件上传到Git服务器" class="headerlink" title="11、将文件上传到Git服务器"></a>11、将文件上传到Git服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">• 前置：需要找到Git仓库地址，配置好SSH或GPG密钥</span><br><span class="line">• git remote add origin github上的地址</span><br><span class="line">• git push –u origin master</span><br></pre></td></tr></table></figure>
+<h3 id="12、通常操作"><a href="#12、通常操作" class="headerlink" title="12、通常操作"></a>12、通常操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">• 单用户：本地修改文件</span><br><span class="line">• git add </span><br><span class="line">• git commit </span><br><span class="line">• git push</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、静态展示页面"><a href="#二、静态展示页面" class="headerlink" title="二、静态展示页面"></a>二、静态展示页面</h2><h3 id="1、静态展示页面的服务"><a href="#1、静态展示页面的服务" class="headerlink" title="1、静态展示页面的服务"></a>1、静态展示页面的服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">• 通常使用html、markdown文件</span><br><span class="line">• 需要条件：username.github.io</span><br></pre></td></tr></table></figure>
+<h3 id="2、静态站点建站系统"><a href="#2、静态站点建站系统" class="headerlink" title="2、静态站点建站系统"></a>2、静态站点建站系统</h3><p>octpress (ruby)、pelican(python)、hexo (node.js)</p>
+<h3 id="3、安装过程"><a href="#3、安装过程" class="headerlink" title="3、安装过程"></a>3、安装过程</h3><p>-node.js npm(包管理器，相当于python中的pip)<br>-sudo npm install -g hexo-cli</p>
+<h3 id="4、使用"><a href="#4、使用" class="headerlink" title="4、使用"></a>4、使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">• 初始化：hexo init</span><br><span class="line">• 创建：hexo n <span class="string">"标题”</span></span><br><span class="line"><span class="string">• 生成：hexo g</span></span><br><span class="line"><span class="string">• 预览：hexo s</span></span><br></pre></td></tr></table></figure>
+<h3 id="5、发布到git"><a href="#5、发布到git" class="headerlink" title="5、发布到git"></a>5、发布到git</h3><p>使用hexo一键发布: hexo d<br>手动push方式: 将publish目录，git push origin master</p>
+<h3 id="6、帮助"><a href="#6、帮助" class="headerlink" title="6、帮助"></a>6、帮助</h3><p>Hexo安装：<a href="http://ms.zjer.cn/index.php?r=studio/post/view&amp;sid=531&amp;id=2380781" target="_blank" rel="noopener">http://ms.zjer.cn/index.php?r=studio/post/view&amp;sid=531&amp;id=2380781</a><br>Markdown简明教程：<a href="https://github.com/Melo618/Simple-Markdown-Guide" target="_blank" rel="noopener">https://github.com/Melo618/Simple-Markdown-Guide</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wendy-wjn.github.io/2020/05/03/pages4/" data-id="ck9uzcjym0001ryjxgfyebrz8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/05/pages3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          第3章终端命令
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/05/pages/">第1章Ubantu安装与配置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/pages2/">第2章Ubantu基本设置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/pages3/">第3章终端命令</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/03/pages4/">第4章Git应用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 WJN<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>第2章Ubantu基本设置 | 王佳妮的笔记维护</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="• 光盘刻录软件 BuruAware • 全盘设定Network-&gt;设置 • 虚拟机镜像分享站点www.osboxes.org&#x2F;ubantu&#x2F;Sf.net 一、操作系统• 管理硬件系统（内核）、系统调用运行硬件系统（终端命令）&#x2F;图形化界面； • 类型：桌面&#x2F;服务器&#x2F;嵌入式 二、Linux• 版本号（年+月）：普通版本&#x2F;LTS版本（2年） • 熟悉终端：terminal • 用户账户默认为标准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第2章Ubantu基本设置">
+<meta property="og:url" content="https://wendy-wjn.github.io/2020/05/05/pages2/index.html">
+<meta property="og:site_name" content="王佳妮的笔记维护">
+<meta property="og:description" content="• 光盘刻录软件 BuruAware • 全盘设定Network-&gt;设置 • 虚拟机镜像分享站点www.osboxes.org&#x2F;ubantu&#x2F;Sf.net 一、操作系统• 管理硬件系统（内核）、系统调用运行硬件系统（终端命令）&#x2F;图形化界面； • 类型：桌面&#x2F;服务器&#x2F;嵌入式 二、Linux• 版本号（年+月）：普通版本&#x2F;LTS版本（2年） • 熟悉终端：terminal • 用户账户默认为标准">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-05T13:15:46.000Z">
+<meta property="article:modified_time" content="2020-05-06T06:46:12.532Z">
+<meta property="article:author" content="WJN">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="王佳妮的笔记维护" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">王佳妮的笔记维护</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">浙江师范大学</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wendy-wjn.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="github-pages2" class="article article-type-github" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/05/pages2/" class="article-date">
+  <time datetime="2020-05-05T13:15:46.000Z" itemprop="datePublished">2020-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第2章Ubantu基本设置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code class="bash">• 光盘刻录软件 BuruAware
+• 全盘设定Network-&gt;设置
+• 虚拟机镜像分享站点www.osboxes.org/ubantu/Sf.net</code></pre>
+<h2 id="一、操作系统"><a href="#一、操作系统" class="headerlink" title="一、操作系统"></a>一、操作系统</h2><pre><code class="bash">• 管理硬件系统（内核）、系统调用运行硬件系统（终端命令）/图形化界面；
+• 类型：桌面/服务器/嵌入式</code></pre>
+<h2 id="二、Linux"><a href="#二、Linux" class="headerlink" title="二、Linux"></a>二、Linux</h2><pre><code class="bash">• 版本号（年+月）：普通版本/LTS版本（2年）
+• 熟悉终端：terminal
+• 用户账户默认为标准账号
+• 安装软件：sudo apt-get install name  
+• 卸载软件：sudo apt-get remove name    
+• 更新软件索引目录：sudo apt-get update    
+• 取消：ctrl+c；放大/缩小：ctrl+=/ctrl+-；切换全屏：ctrl+f；自动补全命令和路径：tab键；
+• yes；bb；cowsay/xcowsay；moo    ；cmatrix；aafire；sl；oneko；</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wendy-wjn.github.io/2020/05/05/pages2/" data-id="ck9u13mm10001uvjxer1l3syg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/05/pages/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          第1章Ubantu安装与配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/05/pages3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第3章终端命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/05/pages/">第1章Ubantu安装与配置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/pages2/">第2章Ubantu基本设置</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/05/pages3/">第3章终端命令</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/03/pages4/">第4章Git应用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 WJN<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
